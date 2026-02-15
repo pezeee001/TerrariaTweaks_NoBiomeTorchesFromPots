@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net40</TargetFramework>
+		<RootNamespace>Tweaks</RootNamespace>
+		<Platforms>x86</Platforms>
+		<AssemblySearchPaths>$(TERRARIA_DEPS);$(AssemblySearchPaths)</AssemblySearchPaths>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<DebugType>none</DebugType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Lib.Harmony" Version="2.4.2" IncludeAssets="compile" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Terraria">
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Xna.Framework">
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Microsoft.Xna.Framework.Game">
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+
+</Project>
